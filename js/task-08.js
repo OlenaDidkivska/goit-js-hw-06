@@ -12,6 +12,9 @@ function handleSubmit(event) {
     alert("Будь ласка, заповніть всі поля!");
   }
 
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  if (email.value !== "" && password.value !== "") {
+    console.log(`Email: ${email.value}, Password: ${password.value}`);
+  }
+
   event.currentTarget.reset();
 }

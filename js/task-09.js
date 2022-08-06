@@ -8,7 +8,7 @@ const output = document.querySelector(".color");
 
 const buttonChangeColorHendler = (event) => {
   let randomColor = getRandomHexColor();
-  body.style.backgroundColor = randomColor;
+  body.style = `background: ${randomColor}`;
   output.textContent = randomColor;
 };
 
