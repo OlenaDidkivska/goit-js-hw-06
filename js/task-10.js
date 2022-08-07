@@ -19,6 +19,7 @@ function getAmount(event) {
 
 function createBoxes(amount) {
   if (amount >= Number(refs.input.min) && amount <= Number(refs.input.max)) {
+    let fragment = document.createDocumentFragment();
     for (let i = 0; i < amount; i += 1) {
       const color = getRandomHexColor();
       const width = 30 + i * 10;
@@ -27,9 +28,9 @@ function createBoxes(amount) {
       item.style.width = `${width}px`;
       item.style.height = `${height}px`;
       item.style.backgroundColor = color;
-      console.log(item);
-      boxes.appendChild(item);
+      fragment.appendChild(item);
     }
+    boxes.appendChild(fragment);
   }
 }
 
